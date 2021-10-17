@@ -1,0 +1,35 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: auto;
+}
+.card__side {
+  height: auto;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+.card__side--back.-x {
+  transform: rotateX(180deg);
+}
+.card__side--back.-y {
+  transform: rotateY(180deg);
+}
+.flipOverY .card__side--back {
+  transform: rotateY(0deg);
+}
+.flipOverY .card__side--front {
+  transform: rotateY(-180deg);
+}
+.flipOverX .card__side--back {
+  transform: rotateX(0deg);
+}
+.flipOverX .card__side--front {
+  transform: rotateX(-180deg);
+}
