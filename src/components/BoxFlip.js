@@ -1,4 +1,6 @@
+import * as React from 'react';
 import classNames from 'classnames';
+import './BoxFlip.css';
 
 const BoxFlip = ({ children, isFlipped, isVertical = false }) => {
   const flipClass = isVertical ? 'flipOverX' : 'flipOverY';
