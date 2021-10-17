@@ -1,7 +1,7 @@
 {
   "name": "react-box-flip",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -24,6 +24,23 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "publish:npm": "rm -rf dist && mkdir dist && babel ./src/components -d dist --copy-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhambattoo/react-box-flip.git"
+  },
+  "keywords": [
+    "react",
+    "react-card-flip",
+    "react-component",
+    "card",
+    "flip"
+  ],
+  "author": "shubhambattoo",
+  "license": "MIT",
+  "homepage": "https://github.com/shubhambattoo/react-box-flip#readme",
+  "bugs": {
+    "url": "https://github.com/shubhambattoo/react-box-flip/issues"
   },
   "eslintConfig": {
     "extends": [

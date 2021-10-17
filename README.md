@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# React Box Flip
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> React Box Flips allows you to flip boxes in your React app.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To use react-box-flip, install it from NPM with npm using the command:
 
-### `npm start`
+```bash
+npm install react-box-flip
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Or, you can also use the [yarn](https://yarnpkg.com/) package manager:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+yarn add react-box-flip
+```
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To use react-box-flip, you need to import it in your React app:
 
-### `npm run build`
+`import ReactBoxFlip from 'react-box-flip';`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Then to use it in your react application you need to provide two child components to the `ReactBoxFlip` component:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `Front`: The component that will be displayed when the box is not flipped.
+- `Back`: The component that will be displayed when the box is flipped.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The component only allows for a manual flip.
 
-### `npm run eject`
+The flip animation is controlled by a `isFlipped` prop. There is no need to provide a default value for this prop.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+import React from 'react';
+import ReactBoxFlip from 'react-box-flip';
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+function App() {
+    const [isFlipped, setIsFlipped] = useState(false);
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    function handleClick() {
+        setIsFlipped(!isFlipped);
+    }
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    return (
+        <>
+        <button onClick={handleClick}> Flip </button>
+            <ReactBoxFlip isFlipped={isFlipped}>
+                <Front>
+                    <h1>Front</h1>
+                </Front>
+                <Back>
+                    <h1>Back</h1>
+                </Back>
+            </ReactBoxFlip>
+        </>
+    );
+}
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Props
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Props      | Type    | Description                                                       | Default   |
+| ---------- | ------- | ----------------------------------------------------------------- | --------- |
+| isFlipped  | boolean | Boolean that controls the flip animation.                         | undefined |
+| isVertical | boolean | Boolean that controls if the box needs to flip in which direction | false     |
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions, issues and feature requests are welcome! Feel free to check [issues](https://github.com/shubhambattoo/react-box-flip/issues) page.
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright © 2021 shubhambattoo.
+This project is [MIT](https://github.com/shubhambattoo/react-box-flip/blob/main/LICENSE) licensed.
