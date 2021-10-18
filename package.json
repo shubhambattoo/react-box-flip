@@ -12,7 +12,8 @@
     "README.md"
   ],
   "scripts": {
-    "publish:npm": "rm -rf dist && mkdir dist && babel ./src/components -d dist --copy-files"
+    "publish:npm": "rm -rf dist && mkdir dist && babel ./src/components -d dist --copy-files",
+    "dev": "cd example && npm start"
   },
   "repository": {
     "type": "git",
