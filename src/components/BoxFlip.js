@@ -1,5 +1,5 @@
 import * as React from 'react';
-import classNames from 'classnames';
+import classNames from 'clsx';
 import './BoxFlip.css';
 
 const BoxFlip = ({ children, isFlipped, isVertical = false }) => {
@@ -19,4 +19,4 @@ const BoxFlip = ({ children, isFlipped, isVertical = false }) => {
   );
 };
 
-export default BoxFlip;
+export {BoxFlip as default};

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import classNames from 'classnames';
+import classNames from 'clsx';
 import './BoxFlip.css';
 
 const BoxFlip = ({
@@ -22,4 +22,4 @@ const BoxFlip = ({
   }, children[1]));
 };
 
-export default BoxFlip;
+export { BoxFlip as default };
