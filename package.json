@@ -1,6 +1,6 @@
 {
   "name": "react-box-flip",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "dependencies": {
     "clsx": "^1.1.1",
