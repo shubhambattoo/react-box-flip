@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'clsx';
 import './BoxFlip.css';
 
@@ -22,4 +23,9 @@ const BoxFlip = ({
   }, children[1]));
 };
 
+BoxFlip.propTypes = {
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  isFlipped: PropTypes.bool,
+  isVertical: PropTypes.bool
+};
 export { BoxFlip as default };
