@@ -1,10 +1,13 @@
 # React Box Flip
 
-> React Box Flips allows you to flip boxes in your React app.
+React Box Flips allows you to flip boxes in your React app.
 
 ## Demo
 
 Live demo can be viewed [here](https://react-box-flip.netlify.app/).
+
+![](https://react-box-flip.netlify.app/flip.gif)
+![](https://react-box-flip.netlify.app/github/flip-vertical.gif)
 
 ## Installation
 
